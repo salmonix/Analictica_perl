@@ -1,0 +1,25 @@
+DATABASE PROFILE CONFIG FILE and DATABASE TYPES
+- TODO: stored in ~/CONF with the profile name to offer an alternative and portable way
+  to exchange profiles and/or creating profiles the GUI not suitable for
+- Content & purpose :
+	The tables, constraints and connection data is stored here. Because there are possibly more than 
+	one scenario - eg. using different data sources at the same time -, a profile must be created
+	for each.
+- Format : YAML::Tiny, trying to keep the KISS principle.
+- Warnings: the word 'engine' is reserved.
+        See the default_schema.conf.
+
+Examples: 
+default_schema.conf:
+
+
+ Subclassing
+   If the Persist::xx module needs extension do it subclassing the appropriate module.
+   The name of the module must be placed in the 'module' section - see PostgreSQL example above.
+   The module must new() as constructor. 
+   Normally there are two children of a Persist::xx class: Tokens and aToken for mere convenience, 
+   because it is up to you how the implementation is done. The only rule is that instantiating an aToken
+   instance all aToken classes are accessible via that class.
+
+ NOTE:
+  The Sources::DB module knows it all. The subclasses receive the relevant part of the profile only.

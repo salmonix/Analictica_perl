@@ -1,0 +1,33 @@
+GENERAL CONSIDERATIONS FOR WRITING EXTENSIONS / FACADES.
+
+Functions are modules that do something with the source text, the list of Tokens and aToken via list of Tokens.
+The Functions may have three return values:
+
+- aToken instance
+- Tokens list instance
+- numeric value (see: extending at Core::aToken)
+
+To merge the return values see Core:aToken.
+
+
+Functions may have the followings methods:
+
+
+The Functions can always access the Profile state via AProfile objects (see: AProfile.pm and 
+AProfile/default.pm or default.yml for a confiuration example ).
+It is possible to add the Functions module as a functionality to aToken or Tokens - either as
+an instance method - specific for that instance -, or as a class method. For the extensions
+see the documentation in Core::aToken.
+
+The Functions must be registered putting a file in the Functions/Reg path.
+The filetypes can be:
+.yml - YAML
+.dmp - Data::Dumper
+.str - Storable
+
+The files may contain the following data:
+
+- wGUI : the position of the module on the wxWidgets UI. Format:
+		Functions->myFuncions->thisFunction
+	 Which will appeare in the Functions menu->myFunctions submenu as thisFuncion
+- info : manual, explanation, about text

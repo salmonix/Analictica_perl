@@ -1,0 +1,5 @@
+UNIVERSAL for the CORE getters returning undef to catch exception.
+
+Rewrite aToken into an internal ARRAY.
+Rewrite Tokens into a direct ARRAY call. -> make a changer script
+

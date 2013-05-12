@@ -1,0 +1,23 @@
+#!/bin/perl -w
+use strict;
+use warnings;
+
+use Test::More;
+use feature ':5.10';
+
+BEGIN {
+	my $module='';
+	$__PACKAGE__::module=$module;
+	print "Testing $module\n";
+	use_ok($module);
+}
+
+my $module=$__PACKAGE__::module;
+# other uses here
+
+
+# make object
+my $obj=$module->new();
+isa_ok($obj,' ');
+
+# start testing

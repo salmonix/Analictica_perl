@@ -1,0 +1,40 @@
+ALingua/<lang> files:
+
+The files here are simple key-values containing different translations. The syntax is always the same:
+key:  value   (YAML)
+<lang>	          : These files contain the different message translations. The program uses English
+		  internally, so it goes 'message' : 'translation'.
+Lingua.internal   : A hash containing the name of a language and the corresponding file. It may happen
+		  that the language has a name that does not fit the actual filesystem character set,
+		  eg. Arabic or Vietnamese.
+		  This file has a no-touch, the in_use value.
+
+Database.internal : This is for internal use. It stores abbreviation or input file format conversions. 
+
+
+
+___ HOWTO write a new translation:
+
+
+ If you want to write a new translation, choose a file, rename it appropriately, translate the
+ messages in it following the 
+
+ key: 'value'
+
+ format according to the YAML syntax (see YAML::Tiny).
+
+ After finishing the translation, open the file Analictica.languages.yml and add your entry. This has the same 
+ syntax. On its left side is the name for the language, on the right the corresponding filename. Eg.
+
+ Suomi: 'Suomi.txt'
+ and so on.
+ 
+ At startup this directory is scanned for filenames' ending and then checks the Analictica.languages.yml file
+ for proper language name.
+ The messages are very verbose and contain no interpolation so there is little need for extended testing.
+
+
+TODO: 
+
+1. WRITE A TRANSLATORS' TOOL.
+2. UTF-8 ENCODING. see general TODO.

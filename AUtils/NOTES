@@ -1,0 +1,3 @@
+Make a parent class for tokenmatrix with rankit and all.
+Even the constructor of Collocations seems to be a generic constructor for cases other 
+than building a matrix.

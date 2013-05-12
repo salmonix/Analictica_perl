@@ -1,0 +1,4 @@
+---
+memory:
+  datafile: ''
+  module: Persist::memory

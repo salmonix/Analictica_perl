@@ -1,0 +1,36 @@
+package  ;
+
+use feature ":5.10";
+use strict;
+use utf8;
+use Carp;
+
+our $VERSION='';
+
+=pod
+
+=head1 NAME
+
+
+=head1 DESCRIPTION
+
+
+=head1 METHODS
+
+=over 4
+
+=item - I<new>
+
+
+=cut 
+
+
+
+1;
+
+__END__
+=pod
+
+=back
+
+=head1 BUGS, WARNINGS and TODO
