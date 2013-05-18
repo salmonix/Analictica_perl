@@ -115,7 +115,6 @@ sub generate_table {
 	);
 	my $self=shift;
 	my $module=$modules{$self->{from}};
-	$DB::single=1;
 	$module=load_new_object($module);
 	$module->set_unit( $self->{unit} );
 	my ($header,$table)=$module->generate_table(@_);

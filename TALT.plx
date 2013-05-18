@@ -101,9 +101,10 @@ say "Number of tokens is ".$#$tlist;
 $tables->generate_table( $tlist );
 $tables->close;
 #$tables->close;
-=cut;
+=cut
 
 #COLLOCATION
+=pod
 for my $no ( 4 ) {
 	my $tables=Export::Tables->new( { file=>"Table_${no}let.xlsx",sheet=>"Colloc ${no}", from=>'frequencies', unit=>'text', } );
 	my $collobj=Extensions::Collocations->new( $tlist );

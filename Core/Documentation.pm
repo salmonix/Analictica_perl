@@ -342,11 +342,9 @@ SUBCLASSING TO CORE TOKENS IS POSSIBLE HOW??????
 
  NOTE:
  The problem is with instance methods and real OO. Perl is not OO, but so flexible
- that you can make it so. (Actually you can make perl a moose, that is a bit bizarre.)
- Regarding real instance methods Python is like Perl so beyond a simpler syntax 
- and stricter intendation - and put definitions first, execution last -
- there is little to gain. But Ruby... 
- Ruby allows adding methods to a particular instance. Plus neat syntax. Learn Ruby.
+ that you can make it so almost. (Actually you can make perl a moose, that is a bit bizarre.)
+ Unfortunately applying real instance methods is a bit tricky while real OO languages do it
+ natively. This is one drawback of Perl.
 
 =over 4
 
